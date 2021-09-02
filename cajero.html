@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo de bikini</title>
+    <link rel="stylesheet" href="./cajero.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Náutica Banco</h1>
+  <img id="img-banco" src="./IMG/banco.webp" width="300" height="300" alt="banco">
+  <img id="img-dinero" src="./IMG/bien dinero.jpg" alt="Ingresar-dinero">
+  <p id="p-info"> Escribe tu información, por favor &#128522 </p>
+  <p id="p-bienvenido"> Bienvenide! Escoge una opción, porfavor &#128522 </p>
+
+  
+
+<div id="seccionLogin">
+  <label for="txt_usuario">USUARIO &#8594</label>
+  <input type="usuario" name="txt_usuario" placeholder="Ingresa tu correo" id="txt-user">
+  
+
+
+<br>
+  <label for="txt_pass">CONTRASEÑA &#8594</label>
+  <input type="password" placeholder="xxxxxxx" name="txt_pass" id="txt-pass">
+
+  
+<br>
+<br>
+
+<button id="btn-login">Login</button>
+<button id="btn-regresar">Regresar</button>
+
+</div>
+  <br>
+  <br>
+
+  <div id="seccionPrincipal">
+    <button id="btn-saldo">Saldo</button>
+    <button id="btn-ingresar">Ingresar Monto</button>
+    <button id="btn-retirar">Retirar Monto</button>
+    <div id="seccionIngresarMonto">
+      <input
+        id="input-ingreso"
+        type="number"
+        placeholder="Cantidad a ingresar"
+      />
+      <button id="btn-aceptar-ingreso">Ingresar la cantidad</button>
+      <p id="p-saldo-ingresado"></p>
+      <p id="p-nuevo-saldo"></p>
+    </div>
+  </div>
+
+  
+
+
+<footer>
+  <p>Copyright&copy; 2021 -Todos los derechos reservados &#128156</p> 
+</footer>
+
+<script src="./cajero.js"></script>
+</body>
+
+</html>

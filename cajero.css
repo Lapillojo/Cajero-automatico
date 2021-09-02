@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(238, 240, 240);
+    color: rgb(94, 149, 169);
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    text-align: center;
+    }
+
+ h1{
+    background-color: rgb(230, 228, 230);
+    color: rgb(7, 5, 7);
+  
+} 
+button{
+    background-color: rgb(27, 140, 140);
+    border: solid 1px rgb(227, 222, 222);
+    color: white;
+    width: 10%;
+    margin-left: 10px;
+  
+} 
+input{
+    text-align: center;
+    width: 18%;
+}
+img{
+    border: solid 2px rgb(9, 9, 9);
+}
+
+p{
+    color: black;
+}
+
+label{
+    font-size: larger;
+}
+
+#seccionLogin button{
+    margin-left: 16px;
+}
+
+footer p{
+    text-align: left;
+    font-size: 55%;
+    color: rgb(128, 126, 126);
+}
