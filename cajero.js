@@ -7,6 +7,13 @@ let imgBanco = document.getElementById("img-banco");
 let imgDinero = document.getElementById("img-dinero");
 let pInfo = document.getElementById("p-info");
 let pBienvenido = document.getElementById("p-bienvenido");
+
+//let seccionSaldo = document.getElementById("seccionSaldo");
+/*
+let btnSaldo = document.getElementById("btn-saldo");
+let btnIngresar = document.getElementById("btn-ingresar");
+let btnRetirar = document.getElementById("btn-retirar");
+ */
 //Ocultando sección principal
 seccionPrincipal.hidden = true;
 seccionIngresarMonto.hidden = true;
@@ -54,7 +61,7 @@ function login(correo, password) {
       break;
     }
   }
-
+// por qué no me sale el error?
   if (flagAlert == true) {
     alert.classList.add("alert-danger");
     alert.textContent = "ERROR! Revisa tu usuario y/o contraseña, por favor";
@@ -62,14 +69,17 @@ function login(correo, password) {
 }
 function ingresar(ingreso) {
   if (usuarioActual.saldo + ingreso > 990) {
-    alert("Por favor, ingresa una cantidad menor. Tu saldo no puede ser mayor a 900.");
+    alert(
+      "Por favor, ingresa una cantidad menor. Tu saldo no puede ser mayor a 900."
+    );
   } else {
     //usuarioActual.saldo+=ingreso
     usuarioActual.saldo = usuarioActual.saldo + ingreso;
     let pSaldoIngresado = document.getElementById("p-saldo-ingresado");
     let pNuevoSaldo = document.getElementById("p-nuevo-saldo");
     pSaldoIngresado.innerText = "El saldo ingresado es de " + ingreso + " $";
-    pNuevoSaldo.innerText = "Tu nuevo saldo es de " + usuarioActual.saldo + " $";
+    pNuevoSaldo.innerText =
+      "Tu nuevo saldo es de " + usuarioActual.saldo + " $";
     /*
     nuevoSaldo = ingreso + usuarioActual.saldo
     usuarioActual.saldo = nuevoSaldo*/
@@ -90,6 +100,8 @@ btnLogin.addEventListener("click", function () {
 // PARA INGRESAR MONTO
 btnIngresar.addEventListener("click", function () {
   seccionIngresarMonto.hidden = false;
+
+ // btnSaldo.hidden = true;
 });
 
 let btnAceptarIngreso = document.getElementById("btn-aceptar-ingreso");
@@ -98,5 +110,15 @@ btnAceptarIngreso.addEventListener("click", function () {
   ingresar(ingreso);
 });
 
+/* PARA INGRESAR SALDO
+btnSaldo.addEventListener("click", function () {
+  seccionIngresarMonto.hidden = false;
 
-    
+});
+
+let btnAceptarIngreso = document.getElementById("btn-aceptar-ingreso");
+btnAceptarIngreso.addEventListener("click", function () {
+  let ingreso = parseInt(document.getElementById("input-ingreso").value);
+  ingresar(ingreso);
+});
+*/
