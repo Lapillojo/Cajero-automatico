@@ -19,23 +19,43 @@ seccionPrincipal.hidden = true;
 seccionIngresarMonto.hidden = true;
 imgDinero.hidden = true;
 pBienvenido.hidden = true;
+
+// LOCAL STORAGE
+let datos = JSON.parse(localStorage.getItem("cuentas"));
+
+if (datos !=null){
+
+}
+else{
+guardar_storage();
+}
+
+function guardar_storage(){
+
 var usuarios = [
   {
     usuario: "fiorella@hotmail.com",
     pass: "1234",
     saldo: 40,
+    movimientos:[],
   },
   {
     usuario: "luis@hotmail.com",
     pass: "1234",
     saldo: 100,
+    movimientos:[],
   },
   {
     usuario: "marisol@hotmail.com",
     pass: "1234",
     saldo: 200,
+    movimientos:[],
   },
 ];
+localStorage.setItem("cuentas", JSON.stringify(usuarios));
+}
+
+
 let usuarioActual;
 function login(correo, password) {
   let flagAlert = true;
