@@ -14,6 +14,8 @@
 
 <body>
 
+<div id="liveAlert"></div>
+
   <h1>Náutica Banco</h1>
   <img id="img-banco" src="./IMG/banco.webp" width="300" height="300" alt="banco">
   <img id="img-dinero" src="./IMG/bien dinero.jpg" alt="Ingresar-dinero">
@@ -24,13 +26,13 @@
 
   <div id="seccionLogin">
     <label for="txt_usuario">USUARIO &#8594</label>
-    <input type="usuario" name="txt_usuario" placeholder="Ingresa tu correo" id="txt-user">
+    <input type="usuario" name="txt_usuario" placeholder="Ingresa tu correo" id="txt-user" required>
 
 
 
     <br>
     <label for="txt_pass">CONTRASEÑA &#8594</label>
-    <input type="password" placeholder="xxxxxxx" name="txt_pass" id="txt-pass">
+    <input type="password" placeholder="xxxxxxx" name="txt_pass" id="txt-pass" required>
 
 
     
@@ -38,9 +40,12 @@
     <br>
     <br>
 
-    <button id="btn-login">Login</button>
-    <button id="btn-regresar">Regresar</button>
+    <input type="submit" id="btn-login" name="btn-login" value="Login" >
+    <input type="submit" id="btn-regresar" name="btn-regresar" value="Regresar" >
 
+<!-- <button  type="submit" id="btn-login">Login</button> -->
+    <!-- <button type="submit" id="btn-regresar">Regresar</button>-->
+    
   </div>
   <br>
   <br>
@@ -48,15 +53,36 @@
   
 
   <div id="seccionPrincipal">
-    <button id="btn-saldo">Saldo</button>
-    <button id="btn-ingresar">Ingresar Monto</button>
-    <button id="btn-retirar">Retirar Monto</button>
+
+    <input type="submit" id="btn-saldo" name="btn-saldo" value="Saldo" >
+    <input type="submit" id="btn-ingresar" name="btn-ingresar" value="Ingresar Monto" >
+    <input type="submit" id="btn-retirar" name="btn-retirar" value="Retirar Monto" >
+<!-- <button id="btn-saldo">Saldo</button> -->
+<!-- <button id="btn-ingresar">Ingresar Monto</button> -->
+<!-- <button id="btn-retirar">Retirar Monto</button> -->
+
+    
+    
+    
+    
     <div id="seccionIngresarMonto">
       <input id="input-ingreso" type="number" placeholder="Cantidad a ingresar" />
-      <button id="btn-aceptar-ingreso">Ingresar la cantidad</button>
+      <input type="submit" id="btn-aceptar-ingreso" name="btn-aceptar-ingreso" value="Ingresar la cantidad" >
+
+      
+<!-- <button id="btn-aceptar-ingreso">Ingresar la cantidad</button> -->
+
       <p id="p-saldo-ingresado"></p>
       <p id="p-nuevo-saldo"></p>
     </div>
+
+    <div id="seccionRetirarMonto">
+      <input id="input-egreso" type="number" placeholder="Cantidad a retirar" />
+      <input type="submit" id="btn-aceptar-retiro" name="btn-aceptar-retiro" value="Retirar la cantidad" >
+      <p id="p-saldo-retirado"></p>
+      <p id="p-nuevo-saldo-retiro"></p>
+    </div>
+
   </div>
   <footer>
     <p>Copyright&copy; 2021 -Todos los derechos reservados &#128156</p>
