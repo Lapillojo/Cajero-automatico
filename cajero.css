@@ -4,6 +4,7 @@ body {
   font-family: "Indie Flower", cursive;
   font-weight: bold;
   text-align: center;
+  margin: auto;
 }
 
 h1 {
@@ -37,10 +38,12 @@ label {
   margin-left: 16px;
 }
 
-footer p {
-  text-align: left;
-  font-size: 55%;
-  color: rgb(128, 126, 126);
+
+
+footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
 
